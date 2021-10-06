@@ -1,5 +1,7 @@
 #pragma once
 
+
+//<-----other lib---->
 #ifdef stdLib 
 #include <iostream>
 #include <string>
@@ -17,6 +19,10 @@ using namespace std;
 #ifdef vectorLib 
 #include <vector>
 #endif
+//<-----other lib---->
+
+
+
 
 //<-----DEBUG----->
 #ifdef debugMode 
@@ -32,17 +38,24 @@ using namespace std;
 #define prints(x) (cout << (x) << " ")
 #define printt(x) (cout << (x) << "\t")
 #define println(x) (cout << (x) << "\n")
-//#define printss(x, y, z) (cout << x << ' ' << y << ' '<< z << ' ')
-//#define readss(x, y, z) (cin >> x >> y >> z)
-#define printFloat(x, n) cout << setprecision(n+1) << x 
+#define printFloat(x, n) cout << setprecision(n + 1) << x
+//void printFloat(double x, int depth = 3, char separator = '.') { int p = 1; for (int i = 0; i < depth; i++) { p *= 10; } double a = (int)x; cout << a << separator << (int)((x - a) * p); }
 //<-----read & print----->
 
+//<-----func----->
 #define mm(x) (x >= 0 ? x : (-1) * x)
 #define ff(x) for (int i = 0; i < (x); i++)
 #define fff(x, y) for (int y = 0; y < (x); y++)
 #define out return 0
 #define clr system("clr")
 #define ps system("pause")
-#define printArr(x) for (int n : x)prints(n)
+#define Array(x) for (auto n : x)prints(n)
+#define allAscii ff(255) { prints((char)i); prints('-'); println(i); } 
+//<-----func----->
 
-void allAscii() { ff(255) { prints((char)i); prints('-'); println(i); } }
+//<-----data----->
+#ifdef stdLib
+#define str string
+#endif
+//<-----data----->
+
