@@ -55,7 +55,10 @@ using namespace std;
 //<-----func----->
 
 //<-----data----->
-#ifdef stdLib
+#ifdef datadef && stdLib
 #define str string
+#endif
+#ifdef datadef
+#define byte uint8_t
 #endif
 //<-----data----->
